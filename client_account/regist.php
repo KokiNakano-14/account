@@ -43,6 +43,18 @@ $stmt = $pdo -> query("select * from user_info");
       <label>カナ（性）</label>
       <input type="text" class="text" size="20" maxlength="10" name="family_name_kana">
     </div>
+    <div>
+      <label>カナ（名）</label>
+      <input type="text" class="text" size="20" maxlength="10" name="last_name_kana">
+    </div>    
+    <div>
+      <label>メールアドレス</label>
+      <input type="text" class="text" size="20" maxlength="100" name="mail">
+    </div>  
+    <div>
+      <label>パスワード</label>
+      <input type="text" class="text" size="20" maxlength="10" name="password">
+    </div>
   </form>
 </body>
 </html>
