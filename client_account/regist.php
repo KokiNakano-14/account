@@ -6,20 +6,10 @@
   <link rel="stylesheet" type="text/css" href="regist.css">
   <title>アカウント登録</title>
 
-  <!-- 平仮名・漢字・カナで入力を制限する関数をここに記載する -->
-
 </head>
 
 <body>
 
-
-<?php  /* PDO文の作成 */
-
-mb_internal_encoding("utf8");
-$pdo = new PDO("mysql:dbname=client; host=localhost;","root","nako14");
-$stmt = $pdo -> query("select * from user_info");
-
-?>
 
 <!-- ナビゲーションバー -->
   <div class="header">
@@ -29,7 +19,7 @@ $stmt = $pdo -> query("select * from user_info");
 
 <!-- 顧客情報入力欄 -->
   <h1>アカウント登録画面</h1>
-  <form method="post" action="regist_conplete.php">
+  <form method="post" action="regist_confirm.php">
     <div class="info">
       <div>
         <label>名前（性）</label>
@@ -56,9 +46,8 @@ $stmt = $pdo -> query("select * from user_info");
         <input type="password" class="password" size="20" maxlength="10" name="password">
       </div>
       <div>
-        <!-- 性別判別のjavascriptを作成 -->
         <label>性別</label>
-        <input type="radio" class="radio" value="男" name="gender">男
+        <input type="radio" class="radio" value="男" name="gender" checked>男
         <input type="radio" class="radio" value="女" name="gender">女
       </div>
       <div>
@@ -129,6 +118,16 @@ $stmt = $pdo -> query("select * from user_info");
       <div>
         <label>アカウント権限</label>
         <input type="text" class="text" size="20" maxlength="100" name="address_2">
+      </div>
+      <div>
+        <label>アカウント権限</label>
+        <select name="authority">
+          <option value="0" selected>一般</option>
+          <option value="1">管理者</option>
+        </select>
+      </div>
+      <div class="info_btn">
+        <input type="submit" class="submit" value="確認する">
       </div>
     </div>    
   </form>

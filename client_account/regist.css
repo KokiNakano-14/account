@@ -22,9 +22,24 @@ h1 {
 }
 
 form {
+  display: block;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+form .info {
+  display: inline-block;
+  text-align: left;
+}
+
+form .info_btn {
   text-align: center;
 }
 
+label {
+  margin-right: 40px;
+}
 
 
 /* フッター */
