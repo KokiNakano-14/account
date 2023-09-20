@@ -117,10 +117,6 @@
       </div>    
       <div>
         <label>アカウント権限</label>
-        <input type="text" class="text" size="20" maxlength="100" name="address_2">
-      </div>
-      <div>
-        <label>アカウント権限</label>
         <select name="authority">
           <option value="0" selected>一般</option>
           <option value="1">管理者</option>
