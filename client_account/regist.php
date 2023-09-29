@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,13 +12,13 @@
 <body>
 
 
-<!-- ナビゲーションバー -->
+  <!-- ナビゲーションバー -->
   <div class="header">
     <p>ナビゲーションバー</p>
   </div>
 
 
-<!-- 顧客情報入力欄 -->
+  <!-- 顧客情報入力欄 -->
   <h1>アカウント登録画面</h1>
   <form method="post" action="regist_confirm.php">
     <div class="info">
@@ -36,11 +37,11 @@
       <div>
         <label>カナ（名）</label>
         <input type="text" class="text" size="20" maxlength="10" name="last_name_kana">
-      </div>    
+      </div>
       <div>
         <label>メールアドレス</label>
         <input type="text" class="text" size="20" maxlength="100" name="mail">
-      </div>  
+      </div>
       <div>
         <label>パスワード</label>
         <input type="password" class="password" size="20" maxlength="10" name="password">
@@ -114,7 +115,7 @@
       <div>
         <label>住所（番地）</label>
         <input type="text" class="text" size="20" maxlength="100" name="address_2">
-      </div>    
+      </div>
       <div>
         <label>アカウント権限</label>
         <select name="authority">
@@ -125,11 +126,12 @@
       <div class="info_btn">
         <input type="submit" class="submit" value="確認する">
       </div>
-    </div>    
+    </div>
   </form>
 
   <div class="footer">
     <p>フッター</p>
   </div>
 </body>
+
 </html>
