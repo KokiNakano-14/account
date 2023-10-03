@@ -17,75 +17,75 @@
 
   <div class="kakunin">
     <label>名前（性）</label>
-    <p class="box">
+    <label class="box">
       <?php echo $_POST['family_name'] ?>
-    </p>
+    </label>
   </div>
   <div class="kakunin">
     <label>名前（名）</label>
-    <p class="box">
+    <label class="box">
       <?php echo $_POST['last_name'] ?>
-    </p>
+    </label>
   </div>
   <div class="kakunin">
     <label>カナ（性）</label>
-    <p class="box">
+    <label class="box">
       <?php echo $_POST['family_name_kana'] ?>
-    </p>
+    </label>
   </div>
   <div class="kakunin">
     <label>カナ（名）</label>
-    <p class="box">
+    <label class="box">
       <?php echo $_POST['last_name_kana'] ?>
-    </p>
+    </label>
   </div>
   <div class="kakunin">
     <label>メールアドレス</label>
-    <p class="box">
+    <label class="box">
       <?php echo $_POST['mail'] ?>
-    </p>
+    </label>
   </div>
   <div class="kakunin">
     <label>パスワード</label>
-    <p class="box">
+    <label class="box">
       <?php echo $_POST['password'] ?>
-    </p>
+    </label>
   </div>
   <div class="kakunin">
     <label>性別</label>
-    <p class="box">
+    <label class="box">
       <?php echo $_POST['gender'] ?>
-    </p>
+    </label>
   </div>
   <div class="kakunin">
     <label>郵便番号</label>
-    <p class="box">
+    <label class="box">
       <?php echo $_POST['postal_code'] ?>
-    </p>
+    </label>
   </div>
   <div class="kakunin">
     <label>都道府県（住所）</label>
-    <p class="box">
+    <label class="box">
       <?php echo $_POST['prefecture'] ?>
-    </p>
+    </label>
   </div>
   <div class="kakunin">
     <label>住所（市区町村）</label>
-    <p class="box">
+    <label class="box">
       <?php echo $_POST['address_1'] ?>
-    </p>
+    </label>
   </div>
   <div class="kakunin">
     <label>住所（番地）</label>
-    <p class="box">
+    <label class="box">
       <?php echo $_POST['address_2'] ?>
-    </p>
+    </label>
   </div>
   <div class="kakunin">
     <label>アカウント権限</label>
-    <p class="box">
+    <label class="box">
       <?php echo $_POST['authority'] ?>
-    </p>
+    </label>
   </div>
 
   <!-- regist.phpに戻って修正する -->

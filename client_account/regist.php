@@ -23,28 +23,34 @@
   <form method="post" action="regist_confirm.php">
     <div class="info">
       <div>
+        <!-- patternでひらがな、漢字指定 -->
         <label>名前（性）</label>
         <input type="text" class="text" size="20" maxlength="10" name="family_name">
       </div>
       <div>
+        <!-- patternでひらがな、漢字指定 -->
         <label>名前（名）</label>
         <input type="text" class="text" size="20" maxlength="10" name="last_name">
       </div>
       <div>
+        <!-- patternでカタカナのみ指定 -->
         <label>カナ（性）</label>
         <input type="text" class="text" size="20" maxlength="10" name="family_name_kana">
       </div>
       <div>
+        <!-- patternでカタカナのみ指定 -->
         <label>カナ（名）</label>
         <input type="text" class="text" size="20" maxlength="10" name="last_name_kana">
       </div>
       <div>
+        <!-- type="email"でメール指定 -->
         <label>メールアドレス</label>
-        <input type="text" class="text" size="20" maxlength="100" name="mail">
+        <input type="email" class="mail" size="20" maxlength="100" name="mail">
       </div>
       <div>
+        <!-- 半角英数字指定 -->
         <label>パスワード</label>
-        <input type="password" class="password" size="20" maxlength="10" name="password">
+        <input type="password" class="password" size="20" maxlength="10" name="password" pattern="^[0-9A-Za-z]+$">
       </div>
       <div>
         <label>性別</label>
@@ -52,8 +58,9 @@
         <input type="radio" class="radio" value="女" name="gender">女
       </div>
       <div>
+        <!-- 半角数字指定 -->
         <label>郵便番号</label>
-        <input type="text" class="text" name="postal_code" maxlength="7">
+        <input type="text" class="text" name="postal_code" maxlength="7" pattern="^[0-9]+$">
       </div>
       <div>
         <label>都道府県（住所）</label>
