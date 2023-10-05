@@ -8,61 +8,61 @@
   <title>アカウント登録</title>
 
 </head>
-
 <body>
-
 
   <!-- ナビゲーションバー -->
   <div class="header">
     <p>ナビゲーションバー</p>
   </div>
 
-
   <!-- 顧客情報入力欄 -->
   <h1>アカウント登録画面</h1>
   <form method="post" action="regist_confirm.php">
-    <div class="info">
-      <div>
-        <!-- patternでひらがな、漢字指定 -->
+
+      <!-- patternでひらがな、漢字指定 -->
+      <div class="info">
         <label>名前（性）</label>
-        <input type="text" class="text" size="20" maxlength="10" name="family_name">
+        <input type="text" class="text" size="20" maxlength="10"    name="family_name">
       </div>
-      <div>
-        <!-- patternでひらがな、漢字指定 -->
+      <!-- patternでひらがな、漢字指定 -->
+      <div class="info">
         <label>名前（名）</label>
-        <input type="text" class="text" size="20" maxlength="10" name="last_name">
+        <input type="text" class="text" size="20" maxlength="10"    name="last_name">
       </div>
-      <div>
-        <!-- patternでカタカナのみ指定 -->
+      <!-- patternでカタカナのみ指定 -->
+      <div class="info">
         <label>カナ（性）</label>
-        <input type="text" class="text" size="20" maxlength="10" name="family_name_kana">
+        <input type="text" class="text"  size="20" maxlength="10"    name="family_name_kana">
       </div>
-      <div>
-        <!-- patternでカタカナのみ指定 -->
+      <!-- patternでカタカナのみ指定 -->
+      <div class="info">
         <label>カナ（名）</label>
-        <input type="text" class="text" size="20" maxlength="10" name="last_name_kana">
+        <input type="text" class="text"  size="20" maxlength="10"    name="last_name_kana">
       </div>
-      <div>
-        <!-- type="email"でメール指定 -->
+      <!-- type="email"でメール指定 -->
+      <div class="info">
         <label>メールアドレス</label>
-        <input type="email" class="mail" size="20" maxlength="100" name="mail">
+        <input type="email" class="mail"  size="20" maxlength="100" name="mail">
       </div>
-      <div>
-        <!-- 半角英数字指定 -->
+      <!-- 半角英数字指定 -->
+      <div class="info">
         <label>パスワード</label>
         <input type="password" class="password" size="20" maxlength="10" name="password" pattern="^[0-9A-Za-z]+$">
       </div>
-      <div>
+
+      <div class="info">
         <label>性別</label>
         <input type="radio" class="radio" value="男" name="gender" checked>男
         <input type="radio" class="radio" value="女" name="gender">女
       </div>
-      <div>
-        <!-- 半角数字指定 -->
+
+      <!-- 半角数字指定 -->
+      <div class="info">
         <label>郵便番号</label>
         <input type="text" class="text" name="postal_code" maxlength="7" pattern="^[0-9]+$">
       </div>
-      <div>
+
+      <div class="info">
         <label>都道府県（住所）</label>
         <select name="prefecture">
           <option value="" selected>選択してください</option>
@@ -115,21 +115,25 @@
           <option value="47">沖縄県</option>
         </select>
       </div>
-      <div>
+
+      <div class="info">
         <label>住所（市区町村）</label>
         <input type="text" class="text" size="20" maxlength="10" name="address_1">
       </div>
-      <div>
+
+      <div class="info">
         <label>住所（番地）</label>
         <input type="text" class="text" size="20" maxlength="100" name="address_2">
       </div>
-      <div>
+
+      <div class="info">
         <label>アカウント権限</label>
         <select name="authority">
           <option value="0" selected>一般</option>
           <option value="1">管理者</option>
         </select>
       </div>
+
       <div class="info_btn">
         <input type="submit" class="submit" value="確認する">
       </div>
@@ -140,5 +144,6 @@
     <p>フッター</p>
   </div>
 </body>
+
 
 </html>

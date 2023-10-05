@@ -21,26 +21,20 @@ h1 {
   left: 50px;
 }
 
-form {
-  display: block;
-  text-align: center;
-  padding-top: 25px;
-  padding-bottom: 25px;
-}
-
-form .info {
-  display: inline-block;
-  text-align: left;
-}
-
 form .info_btn {
   text-align: center;
+  border: 1px solid black;
+  color: black;
+  background-color: white;
+  width: 150px;
 }
 
 label {
-  padding-top: 20px;  
+  padding-top: 20px; 
+  padding-left: 30%;
+  padding-right: 40px;
+  text-align: left;
 }
-
 
 /* フッター */
 .footer {

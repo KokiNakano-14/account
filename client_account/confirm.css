@@ -1,4 +1,3 @@
-/* 全体の枠線 */
 body {
   border: 2px solid black;
   width: 60%;
@@ -7,30 +6,53 @@ body {
   left: 300px;
 }
 
-/* ヘッダー */
+/* ナビゲーションバー */
 .header {
-  text-align: center;
   border-bottom: 2px solid black;
-
+  text-align: center;
+  padding: 15px 15px;
 }
 
-/* 確認画面 */
 h1 {
+  padding-left: 60px;
   font-size: 15px;
 }
 
-body {
-  text-align: center;
+.kakunin {
+  padding-left: 40%;
 }
 
-.kakunin p {
-  float: left;
+label {
   text-align: left;
-  
+  padding-right: 45px;
+}
+
+label .box {
+  text-align: left;
+}
+
+form {
+  padding-left: 40%;
+}
+
+.button1 {
+  border: 1px solid black;
+  color: black;
+  background-color: white;
+  width: 150px;
+}
+
+.button2 {
+  border: 1px solid black;
+  color: black;
+  background-color: white;
+  width: 150px;
 }
 
 /* フッター */
 .footer {
   text-align: center;
-  border-top: 2px solid black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 2px solid;
 }
