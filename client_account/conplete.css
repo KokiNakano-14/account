@@ -2,9 +2,18 @@
 body {
   border: 2px solid black;
   width: 60%;
-  height: auto;
+  height: 400px;
   position: relative;
   left: 300px;
+}
+
+h1 {
+    padding-left: 60px;
+    font-size: 15px;
+}
+
+.main p {
+  text-align: center;
 }
 
 /* ヘッダー */

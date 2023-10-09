@@ -1,3 +1,16 @@
+<?php
+
+// 送信ボタンが押されたかどうか
+if(isset($_POST['submit'])){ //#1
+
+  // POSTされたデータをエスケープ処理して変数に格納
+  
+
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -11,14 +24,12 @@
 <body>
 
   <!-- ナビゲーションバー -->
-  <div class="header">
-    <p>ナビゲーションバー</p>
-  </div>
+  <header>ナビゲーションバー</header>
 
   <!-- 顧客情報入力欄 -->
+  <main>
   <h1>アカウント登録画面</h1>
-  <form method="post" action="regist_confirm.php">
-
+    <form method="post" action="regist_confirm.php">
       <!-- patternでひらがな、漢字指定 -->
       <div class="info">
         <label>名前（性）</label>
@@ -47,21 +58,18 @@
       <!-- 半角英数字指定 -->
       <div class="info">
         <label>パスワード</label>
-        <input type="password" class="password" size="20" maxlength="10" name="password" pattern="^[0-9A-Za-z]+$">
+        <input type="password" class="password" size="20" maxlength="10" name="password" pattern="[0-9A-Za-z] +$">
       </div>
-
       <div class="info">
         <label>性別</label>
         <input type="radio" class="radio" value="男" name="gender" checked>男
         <input type="radio" class="radio" value="女" name="gender">女
       </div>
-
       <!-- 半角数字指定 -->
       <div class="info">
         <label>郵便番号</label>
         <input type="text" class="text" name="postal_code" maxlength="7" pattern="^[0-9]+$">
       </div>
-
       <div class="info">
         <label>都道府県（住所）</label>
         <select name="prefecture">
@@ -115,17 +123,14 @@
           <option value="47">沖縄県</option>
         </select>
       </div>
-
       <div class="info">
         <label>住所（市区町村）</label>
         <input type="text" class="text" size="20" maxlength="10" name="address_1">
       </div>
-
       <div class="info">
         <label>住所（番地）</label>
         <input type="text" class="text" size="20" maxlength="100" name="address_2">
       </div>
-
       <div class="info">
         <label>アカウント権限</label>
         <select name="authority">
@@ -133,16 +138,13 @@
           <option value="1">管理者</option>
         </select>
       </div>
-
       <div class="info_btn">
         <input type="submit" class="submit" value="確認する">
       </div>
-    </div>
-  </form>
+    </form>
+  </main>
 
-  <div class="footer">
-    <p>フッター</p>
-  </div>
+  <footer>フッター</footer>
 </body>
 
 

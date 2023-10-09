@@ -1,16 +1,16 @@
 /* 全体の枠線 */
 body {
-  border: 2px solid black;
+  border: 1px solid gray;
   width: 60%;
   height: auto;
   position: relative;
   left: 300px;
-}
+} 
 
 /* ヘッダー */
 .header {
   text-align: center;
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid gray;
 }
 
 /* 入力フォーム */
@@ -23,10 +23,7 @@ h1 {
 
 form .info_btn {
   text-align: center;
-  border: 1px solid black;
-  color: black;
-  background-color: white;
-  width: 150px;
+  padding-left: 30%; 
 }
 
 label {
@@ -39,5 +36,5 @@ label {
 /* フッター */
 .footer {
   text-align: center;
-  border-top: 2px solid black;
+  border-top: 1px solid gray;
 }

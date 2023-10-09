@@ -1,3 +1,13 @@
+<?php
+
+
+// データ保持のsession
+// セッション開始
+session_start();
+
+
+?>
+
 <!-- アカウント登録確認画面 -->
 <!DOCTYPE html>
 <html lang="ja">
