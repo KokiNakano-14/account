@@ -2,39 +2,62 @@
 body {
   border: 1px solid gray;
   width: 60%;
-  height: auto;
-  position: relative;
-  left: 300px;
+  height: 600px;
+  margin-left: 20%;
 } 
 
 /* ヘッダー */
-.header {
-  text-align: center;
+header {
   border-bottom: 1px solid gray;
-}
-
-/* 入力フォーム */
-h1 {
-  font-size: 15px;
-  padding-left: 30px;
-  position: relative;
-  left: 50px;
-}
-
-form .info_btn {
   text-align: center;
-  padding-left: 30%; 
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-label {
-  padding-top: 20px; 
-  padding-left: 30%;
-  padding-right: 40px;
-  text-align: left;
+/* mainの中身 */
+h1 {
+  font-size: 20px;
+  padding-left: 50px;
 }
 
-/* フッター */
-.footer {
+div label {
+  padding-left: 300px;
+}
+
+div {
+  margin-bottom: 10px;
+}
+
+.text, .password {
+  margin-left: 100px;
+}
+
+.mail {
+  margin-left: 70px;
+}
+
+.radio1 {
+  margin-left: 150px;
+}
+
+.radio2 {
+  margin-left: 30px;
+}
+
+select {
+  margin-left: 100px;
+}
+
+.submit {
+  margin-left: 410px;
+  border: 1px solid gray;
+  width: 150px;
+  color: black;
+  background-color: white;
+}
+
+footer {
   text-align: center;
   border-top: 1px solid gray;
+  padding-top: 6px;
 }
