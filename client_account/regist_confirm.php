@@ -1,12 +1,3 @@
-<?php
-
-
-// データ保持のsession
-// セッション開始
-session_start();
-
-
-?>
 
 <!-- アカウント登録確認画面 -->
 <!DOCTYPE html>
@@ -99,7 +90,7 @@ session_start();
   </div>
 
   <!-- regist.phpに戻って修正する -->
-  <form action="regist.php">
+  <form action="regist.php" method="post">
     <div class="kakunin_btn">
       <input type="submit" class="button1" value="前に戻る">
     </div>

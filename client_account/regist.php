@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -5,6 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="regist.css">
+
   <title>アカウント登録</title>
 
 </head>
@@ -20,32 +22,44 @@
       <!-- patternでひらがな、漢字指定 -->
       <div>
         <label>名前（性）</label>
-        <input type="text" class="text" size="20" maxlength="10"    name="family_name">
+        <input type="text" class="text" size="20" maxlength="10"  name="family_name" required
+          oninvalid="this.setCustomValidity('名前（性）が未入力です')"
+          onchange="this.setCustomValidity('')">
       </div>
       <!-- patternでひらがな、漢字指定 -->
       <div>
         <label>名前（名）</label>
-        <input type="text" class="text" size="20" maxlength="10"    name="last_name">
+        <input type="text" class="text" size="20" maxlength="10" name="last_name" required
+          oninvalid="this.setCustomValidity('名前（名）が未入力です')"
+          onchange="this.setCustomValidity('')">
       </div>
       <!-- patternでカタカナのみ指定 -->
       <div>
         <label>カナ（性）</label>
-        <input type="text" class="text"  size="20" maxlength="10"    name="family_name_kana">
+        <input type="text" class="text"  size="20" maxlength="10" name="family_name_kana" required
+          oninvalid="this.setCustomValidity('カナ（性）が未入力です')"
+          onchange="this.setCustomValidity('')">
       </div>
       <!-- patternでカタカナのみ指定 -->
       <div>
         <label>カナ（名）</label>
-        <input type="text" class="text"  size="20" maxlength="10"    name="last_name_kana">
+        <input type="text" class="text"  size="20" maxlength="10" name="last_name_kana" required
+          oninvalid="this.setCustomValidity('カナ（名）が未入力です')"
+          onchange="this.setCustomValidity('')">
       </div>
       <!-- type="email"でメール指定 -->
       <div>
         <label>メールアドレス</label>
-        <input type="email" class="mail"  size="20" maxlength="100" name="mail">
+        <input type="email" class="mail"  size="20" maxlength="100" name="mail" required
+          oninvalid="this.setCustomValidity('メールアドレスが未入力です')"
+          onchange="this.setCustomValidity('')">
       </div>
       <!-- 半角英数字指定 -->
       <div>
         <label>パスワード</label>
-        <input type="password" class="password" size="20" maxlength="10" name="password" pattern="[0-9A-Za-z] +$">
+        <input type="password" class="password" size="20" maxlength="10" name="password" required
+          oninvalid="this.setCustomValidity('パスワードが未入力です')"
+          onchange="this.setCustomValidity('')">
       </div>
       <div>
         <label>性別</label>
@@ -55,11 +69,15 @@
       <!-- 半角数字指定 -->
       <div>
         <label>郵便番号</label>
-        <input type="text" class="text" name="postal_code" maxlength="7" pattern="^[0-9]+$">
+        <input type="text" class="text" name="postal_code" maxlength="7" required
+          oninvalid="this.setCustomValidity('郵便番号が未入力です')"
+          onchange="this.setCustomValidity('')">
       </div>
       <div>
         <label>都道府県（住所）</label>
-        <select name="prefecture">
+        <select name="prefecture" required
+          oninvalid="this.setCustomValidity('都道府県が未選択です')"
+          onchange="this.setCustomValidity('')">
           <option value="" selected>選択してください</option>
           <option value="1">北海道</option>
           <option value="2">青森県</option>
@@ -112,11 +130,15 @@
       </div>
       <div>
         <label>住所（市区町村）</label>
-        <input type="text" class="text" size="20" maxlength="10" name="address_1">
+        <input type="text" class="text" size="20" maxlength="10" name="address_1" required
+          oninvalid="this.setCustomValidity('住所（市町村）が未入力です')"
+          onchange="this.setCustomValidity('')">
       </div>
       <div>
         <label>住所（番地）</label>
-        <input type="text" class="text" size="20" maxlength="100" name="address_2">
+        <input type="text" class="text" size="20" maxlength="100" name="address_2" required
+          oninvalid="this.setCustomValidity('住所（番地）が未入力です')"
+          onchange="this.setCustomValidity('')">
       </div>
       <div>
         <label>アカウント権限</label>
