@@ -1,11 +1,3 @@
-<?php
-
-  var_dump('family_name');
-  
-?>
-
-
-
 <!DOCTYPE html>
 <html lang="ja">
 
