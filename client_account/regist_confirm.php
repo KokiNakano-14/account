@@ -1,14 +1,3 @@
-<?php
-
-// パスワードのハッシュ化
-$password = 'password';
-$password_hash($password, PASSWORD_DEFAULT);
-
-var_dump(hash($password, PASSWORD_DEFAULT));
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="ja">
 

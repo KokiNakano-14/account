@@ -1,3 +1,12 @@
+<?php
+
+// パスワードのハッシュ化
+if(isset($_POST['password'])){
+  $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+}
+
+?>
+
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -73,7 +82,8 @@
         <input type="password" class="password" size="20" maxlength="10" name="password" required
           oninvalid="this.setCustomValidity('パスワードが未入力です')"
           onchange="this.setCustomValidity('')"
-          value="<?php if( !empty($_POST['password']) ){ echo $_POST['password']; } ?>">
+          value="<?php 
+          if( !empty($_POST['password']) ){ echo $_POST['password']; } ?>">
       </div>
       <div>
         <label>性別</label>
