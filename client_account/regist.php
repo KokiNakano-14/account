@@ -1,13 +1,3 @@
-<?php
-
-// パスワードのハッシュ化
-if(isset($_POST['password'])){
-  $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-}
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="ja">
 

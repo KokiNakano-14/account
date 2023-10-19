@@ -47,7 +47,7 @@
   <div class="kakunin">
     <label>パスワード</label>
     <label class="box">
-      <?php echo $_POST['password'] ?>
+      <?php echo $_POST['password'];?>
     </label>
   </div>
   <div class="kakunin">
