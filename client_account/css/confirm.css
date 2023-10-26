@@ -1,60 +1,98 @@
+/* 全体の枠線 */
 body {
-  border: 2px solid black;
+  border: 2px black solid;
   width: 60%;
   height: auto;
-  position: relative;
-  left: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
 }
 
-/* ナビゲーションバー */
-.header {
-  border-bottom: 2px solid black;
+/* ヘッダー */
+header {
   text-align: center;
-  padding: 15px 15px;
+  border-bottom: 2px black solid;
 }
 
+
+/* 表示場所 */
+
+/* アカウント登録確認画面 */
 h1 {
-  padding-left: 60px;
-  font-size: 15px;
+  clear: both;
+  font-size: 20px;
+  padding-left: 40px;
 }
 
-.kakunin {
-  padding-left: 40%;
+.box {
+  line-height: 2;
+  padding-left: 300px;
 }
 
-label {
-  text-align: left;
-  padding-right: 45px;
+/* 名前・カナ・パスワード */
+.name1, .name2, .name3, .name4, .password {
+  margin-left: 130px;
 }
 
-label .box {
-  text-align: left;
+/* パスワード */
+.mail {
+  margin-left: 100px;
 }
 
-form {
-  padding-left: 40%;
+/* 性別 */
+.gender {
+  margin-left: 180px;
 }
 
+/* 郵便番号 */
+.postal {
+  margin-left: 150px;
+}
+
+/* 都道府県（住所） */
+.prefecture {
+  margin-left: 90px;
+}
+
+/* 都道府県（市町村） */
+.address1 {
+  margin-left: 80px;
+}
+
+/* 都道府県（番地） */
+.address2 {
+  margin-left: 110px;
+}
+
+.authority {
+  margin-left: 100px;
+}
+
+/* 送信ボタン */
 .button1 {
   float: left;
-  border: 1px solid black;
-  color: black;
+  margin-top: 20px;
+  margin-left: 350px;
   background-color: white;
-  width: 150px;
+  border: 2px solid black;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
+/* 戻るボタン */
 .button2 {
-  border: 1px solid black;
-  color: black;
+  margin-top: 20px;
+  margin-left: 40px;
   background-color: white;
-  width: 150px;
-  padding-bottom: 50px;
+  border: 2px solid black;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* フッター */
-.footer {
+footer {
   text-align: center;
+  border-top: 2px solid black;
+  margin-top: 30px;
   padding-top: 10px;
-  padding-bottom: 10px;
-  border-top: 2px solid;
 }

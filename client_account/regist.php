@@ -24,7 +24,7 @@
 
     <h2>アカウント登録画面</h2>
 
-    <form method="$_POST" action="regist_conform.php">
+    <form method="post" action="regist_confirm.php">
       <!-- 以下情報を入力 -->
       <div class="nyuuryoku">
         <label>名前（性）</label>
@@ -58,8 +58,8 @@
 
       <div class="nyuuryoku">
         <label>性別</label>
-        <input type="radio" class="radio1" value="XXX" name="gender" checked>男
-        <input type="radio" class="radio2" value="XXX" name="gender">女
+        <input type="radio" class="radio1" value="" name="gender" checked>男
+        <input type="radio" class="radio2" value="" name="gender">女
       </div>
 
       <div class="nyuuryoku">

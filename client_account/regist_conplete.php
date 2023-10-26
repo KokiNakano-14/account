@@ -19,27 +19,29 @@ $hashed_password = password_hash($user_password, PASSWORD_DEFAULT);
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="conplete.css">
+  <link rel="stylesheet" type="text/css" href="css/conplete.css">
   <title>アカウント登録</title>
 </head>
 
 <body>
-  <div class="header">ナビゲーションバー</div>
+  <header>ヘッダー</header>
 
-  <h1>アカウント登録完了画面</h1>
+  <h2>アカウント登録完了画面</h2>
 
-  <div class="main">
-    <p>登録完了しました</p>
-  </div>
+  <main>
+    <div>
+      <p>登録完了しました</p>
+    </div>
+  </main>
 
   <!-- regist.phpに戻る -->
   <form action="regist.php">
-    <div class="back_btn">
+    <div>
       <input type="submit" class="button" value="TOPページに戻る">
     </div>
   </form>
 
-  <div class="footer">フッター</div>
+  <footer>フッター</footer>
 
 </body>
 </html>
