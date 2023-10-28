@@ -34,8 +34,8 @@ $hashed_password = password_hash($user_password, PASSWORD_DEFAULT);
     </div>
   </main>
 
-  <!-- regist.phpに戻る -->
-  <form action="regist.php">
+  <!-- D.I.Blogに移動 -->
+  <form action="DIblog_keijiban/index.php">
     <div>
       <input type="submit" class="button" value="TOPページに戻る">
     </div>
