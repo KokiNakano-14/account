@@ -132,7 +132,7 @@
     <input type="hidden" value="<?php echo $_POST['family_name_kana'] ?>" name="family_name_kana">
     <input type="hidden" value="<?php echo $_POST['last_name_kana'] ?>" name="last_name_kana">
     <input type="hidden" value="<?php echo $_POST['mail'] ?>" name="mail">
-    <input type="hidden" value="<?php echo $hashed_password ?>" name="password">
+    <input type="hidden" value="<?php echo $_POST['password'] ?>" name="password">
     <input type="hidden" value="<?php echo $_POST['gender'] ?>" name="gender">
     <input type="hidden" value="<?php echo $_POST['postal_code'] ?>" name="postal_code">
     <input type="hidden" value="<?php echo $_POST['prefecture'] ?>" name="prefecture">

@@ -14,7 +14,7 @@
 
 <body>
 
-  <!-- ヘッダー -->
+<!-- ヘッダー -->
   <header>
     <p>ナビゲーションバー</p>
   </header>
@@ -28,32 +28,38 @@
       <!-- 以下情報を入力 -->
       <div class="nyuuryoku">
         <label>名前（性）</label>
-        <input type="text" class="name1" maxlength="10" name="family_name">
+        <input type="text" class="name1" maxlength="10" name="family_name" 
+        value="<?php if( !empty($_POST['family_name']) ){ echo $_POST['family_name']; } ?>">
       </div>
 
       <div class="nyuuryoku">
         <label>名前（名）</label>
-        <input type="text" class="name2" maxlength="10" name="last_name">
+        <input type="text" class="name2" maxlength="10" name="last_name"
+        value="<?php if( !empty($_POST['last_name']) ){ echo $_POST['last_name']; } ?>">
       </div>
 
       <div class="nyuuryoku">
         <label>カナ（性）</label>
-        <input type="text" class="name3" maxlength="10" name="family_name_kana">
+        <input type="text" class="name3" maxlength="10" name="family_name_kana"
+        value="<?php if( !empty($_POST['family_name_kana']) ){ echo $_POST['family_name_kana']; } ?>">
       </div>
 
       <div class="nyuuryoku">
         <label>カナ（名）</label>
-        <input type="text" class="name4" maxlength="10" name="last_name_kana">
+        <input type="text" class="name4" maxlength="10" name="last_name_kana"
+        value="<?php if( !empty($_POST['last_name_kana']) ){ echo $_POST['last_name_kana']; } ?>">
       </div>
 
       <div class="nyuuryoku">
         <label>メールアドレス</label>
-        <input type="email" class="mail" maxlength="100" name="mail">
+        <input type="email" class="mail" maxlength="100" name="mail"
+        value="<?php if( !empty($_POST['mail']) ){ echo $_POST['mail']; } ?>">
       </div>
 
       <div class="nyuuryoku">
         <label>パスワード</label>
-        <input type="text" class="password" maxlength="10" name="password">
+        <input type="text" class="password" maxlength="10" name="password"
+        value="<?php if( !empty($_POST['password']) ){ echo $_POST['password']; } ?>">
       </div>
 
       <div class="nyuuryoku">
@@ -64,7 +70,8 @@
 
       <div class="nyuuryoku">
         <label>郵便番号</label>
-        <input type="text" class="postal" maxlength="7" name="postal_code">
+        <input type="text" class="postal" maxlength="7" name="postal_code"
+        value="<?php if( !empty($_POST['postal_code']) ){ echo $_POST['postal_code']; } ?>">
       </div>
 
       <div class="nyuuryoku">
@@ -97,12 +104,14 @@
 
       <div class="nyuuryoku">
         <label>住所（市区町村）</label>
-        <input type="text" class="address1" maxlength="10" name="address_1">
+        <input type="text" class="address1" maxlength="10" name="address_1"
+        value="<?php if( !empty($_POST['address_1']) ){ echo $_POST['address_1']; } ?>">
       </div>
 
       <div class="nyuuryoku">
         <label>住所（番地）</label>
-        <input type="text" class="address2" maxlength="100" name="address_2">
+        <input type="text" class="address2" maxlength="100" name="address_2"
+        value="<?php if( !empty($_POST['address_2']) ){ echo $_POST['address_2']; } ?>">
       </div>
 
       <div class="nyuuryoku">
@@ -123,5 +132,7 @@
     <p>フッター</p>
   </footer>
 
+  <script src="DIblog_js/regist.js"></script>
+
 </body>
-</html>l
+</html>
