@@ -7,6 +7,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/regist.css">
+  <link rel="stylesheet" href="DIblog_js/js.css">
 
   <title>アカウント登録</title>
 
@@ -26,6 +27,7 @@
 
     <form method="post" action="regist_confirm.php">
       <!-- 以下情報を入力 -->
+
       <div class="nyuuryoku">
         <label>名前（性）</label>
         <input type="text" class="name1" maxlength="10" name="family_name" 
@@ -64,9 +66,11 @@
 
       <div class="nyuuryoku">
         <label>性別</label>
-        <input type="radio" class="radio1" value="" name="gender" checked>男
-        <input type="radio" class="radio2" value="" name="gender">女
+        <input type="radio" class="radio1" value="male" name="gender" checked>男
+        <input type="radio" class="radio2" value="female" name="gender">女
       </div>
+      <div class="error-message" id="gender-error"></div>
+
 
       <div class="nyuuryoku">
         <label>郵便番号</label>

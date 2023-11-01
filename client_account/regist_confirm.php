@@ -4,6 +4,7 @@
   // パスワードをハッシュ化する
   $hashed_password = password_hash($user_password, PASSWORD_DEFAULT);
 
+
 ?>
 
 <!DOCTYPE html>
@@ -61,7 +62,11 @@
   <div>
     <label class="box">パスワード</label>
     <label class="password">
-      <?php echo $_POST['password'];?>
+    <?php 
+      $password = $_POST['password'];
+      $hidden_password = str_repeat('●', strlen($password));
+      echo $hidden_password;
+      ?>
     </label>
   </div>
 
@@ -142,5 +147,8 @@
   </form>
 
   <footer>フッター</footer>
+
+
+  <script src="DIblog_js/confirm.js"></script>
 </body>
 </html>
