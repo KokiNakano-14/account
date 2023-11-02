@@ -38,3 +38,8 @@ footer {
   margin-top: auto;
   padding-top: 10px;
 }
+
+/* エラーメッセージ */
+.error-message {
+  color: red;
+}
