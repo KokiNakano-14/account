@@ -64,12 +64,16 @@
       <div class="nyuuryoku">
         <label>メールアドレス</label>
         <input type="email" class="mail" maxlength="100" name="mail"
+        pattern="[a-zA-Z0-9@-]+" 
+        title="半角英数字、半角ハイフン、半角記号（ハイフンとアットマーク）のみ入力できます"
         value="<?php if( !empty($_POST['mail']) ){ echo $_POST['mail']; } ?>">
       </div>
 
       <div class="nyuuryoku">
         <label>パスワード</label>
         <input type="text" class="password" maxlength="10" name="password"
+        pattern="[a-zA-Z0-9]+" 
+        title="英数字のみ入力できます"
         value="<?php if( !empty($_POST['password']) ){ echo $_POST['password']; } ?>">
       </div>
 

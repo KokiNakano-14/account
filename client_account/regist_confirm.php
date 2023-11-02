@@ -1,12 +1,3 @@
-<?php
-
-  $user_password = $_POST['password'];
-  // パスワードをハッシュ化する
-  $hashed_password = password_hash($user_password, PASSWORD_DEFAULT);
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="ja">
 
