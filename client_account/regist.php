@@ -145,8 +145,8 @@
       <div class="nyuuryoku">
         <label>アカウント権限</label>
         <select class="authority" name="authority">
-          <option value="0">一般</option>
-          <option value="1">管理者</option>
+          <option value="一般">一般</option>
+          <option value="管理者">管理者</option>
         </select>
       </div>
 
