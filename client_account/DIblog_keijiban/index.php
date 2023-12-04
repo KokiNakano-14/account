@@ -30,7 +30,8 @@ $stmt = $pdo -> query("select * from keijiban");
       <li>登録フォーム</li>
       <!-- お問い合わせフォームに移動 -->
       <li><a href="http://localhost/task/task-nakano/account/client_account/regist.php">アカウント登録</a></li>
-      <li>問い合わせ
+      <li><a href="http://localhost/task/task-nakano/account/client_account/list/list.php">アカウント一覧</a></li>
+      <li>問い合わせ</li>
       <li>その他</li>
     </ul>
   </header>
