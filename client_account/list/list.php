@@ -1,3 +1,14 @@
+<?php
+  // 文字化け防止のコード
+  mb_internal_encoding("utf8");
+  // DBに接続する
+  $pdo = new PDO("mysql:dbname=client;host=localhost;","root","nako14");
+  // order by id desc でidを下から表示
+  $stmt = $pdo -> query("select * from user_info order by id desc");
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -18,6 +29,10 @@
       <tr>
         <th>ID</th><th>名前（性）</th><th>名前（名）</th><th>カナ（性）</th><th>カナ（名）</th><th>メールアドレス</th><th>性別</th><th>アカウント権限</th><th>削除フラグ</th><th>登録日時</th><th>操作</th>
       </tr>
+      <tr>
+        <th><?php echo"id"; ?></th>
+      </tr>
+      
     </tbody>
   </table>
 
