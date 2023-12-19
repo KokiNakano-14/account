@@ -6,10 +6,7 @@
   // order by id desc でidを下から表示
   $stmt = $pdo -> query("select * from user_info");
 
-
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -26,17 +23,41 @@
 
   <main>
 
+  <?php
+
+    echo"<table>";
+      echo"<tr>";
+        echo"<th>ID</th>";
+        echo"<th>名前（性）</th>";
+        echo"<th>名前（名）</th>";
+        echo"<th>カナ（性）</th>";
+        echo"<th>カナ（名）</th>";
+        echo"<th>メールアドレス</th>";
+        echo"<th>性別</th>";
+        echo"<th>アカウント権限</th>";
+        echo"<th>削除フラグ</th>";
+        echo"<th>登録日時</th>";
+        echo"<th>操作</th>";
+      echo"</tr>";
+      echo"<tr>";
+        foreach($stmt as $row) {
+        echo"<th>".$row['id']."</th>";
+        echo"<th>".$row['family_name']."</th>";
+        echo"<th>".$row['last_name']."</th>";
+        echo"<th>".$row['family_name_kana']."</th>";
+        echo"<th>".$row['last_name_kana']."</th>";
+        echo"<th>".$row['mail']."</th>";
+        echo"<th>".$row['gender']."</th>";
+        echo"<th>".$row['authority']."</th>";
+        echo"<th>".$row['registered_time']."</th>";
+
+        }
+      echo"</tr>";
+  echo"</table>";
+
+?>
+
   
-  <table>
-      <tr>
-        <th>ID</th><th>名前（性）</th><th>名前（名）</th><th>カナ（性）</th><th>カナ（名）</th><th>メールアドレス</th><th>性別</th><th>アカウント権限</th><th>削除フラグ</th><th>登録日時</th><th>操作</th>
-      </tr>
-      <tr>
-        <?php
-        <th></th>
-        ?>
-      </tr>
-  </table>
 
   </main>
 
