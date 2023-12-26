@@ -88,9 +88,8 @@
 
       <div class="nyuuryoku">
         <label>性別</label>
-        <!-- isset()でgenderでチェックされている値にchecked属性が追加される -->
-          <input type="radio" class="radio1" value="男" name="gender" <?php if(isset($_POST['gender']) && $_POST['gender'] == '男') echo 'checked'; ?> checked >男
-          <input type="radio" class="radio2" value="女" name="gender" <?php if(isset($_POST['gender']) && $_POST['gender'] == '女') echo 'checked'; ?>>女
+        <input type="radio" class="radio1" value="0" name="gender" <?php if(!isset($_POST['gender']) || (isset($_POST['gender']) && $_POST['gender'] == '0')) echo 'checked'; ?> >男
+        <input type="radio" class="radio2" value="1" name="gender" <?php if(isset($_POST['gender']) && $_POST['gender'] == '1') echo 'checked'; ?>>女
       </div>
       <div class="error-message" id="gender-error"></div>
 
@@ -154,11 +153,10 @@
       <div class="nyuuryoku">
         <label>アカウント権限</label>
         <select class="authority" name="authority">
-          <option value="一般">一般</option>
-          <option value="管理者">管理者</option>
+          <option value="0" <?php if(!isset($_POST['authority']) || (isset($_POST['authority']) && $_POST['authority'] == '0')) echo 'selected'; ?>>一般</option>
+          <option value="1" <?php if(isset($_POST['authority']) && $_POST['authority'] == '1') echo 'selected'; ?>>管理者</option>
         </select>
       </div>
-
       <div>
         <input type="submit" class="kakunin_btn" value="確認する">
       </div>

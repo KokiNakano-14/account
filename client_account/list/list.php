@@ -50,7 +50,6 @@
         echo "<td>" . $row['family_name_kana'] . "</td>";
         echo "<td>" . $row['last_name_kana'] . "</td>";
         echo "<td>" . $row['mail'] . "</td>";
-        // echo "<td>" . $row['gender'] . "</td>";
         echo "<td>";
         if ($row['gender'] == 0) {
             echo "男";
@@ -58,16 +57,26 @@
             echo "女";
         }
         echo "</td>";
-        echo "<td>" . $row['delete_flag'] . "</td>";
-        echo "<td>" . $row['authority'] . "</td>";
+        echo "<td>";
+        if ($row['authority'] == 0) {
+          echo "一般";
+        } else {
+          echo "管理者";
+        }
+        echo "</td>";
+        echo "<td>" ;
+        if ($row['delete_flag'] == 0) {
+          echo "有効";
+        } else {
+          echo "無効";
+        }
+        echo "</td>";
         // 登録日時を年月日の形式にフォーマットして表示
         $registeredTime = date('Y-m-d', strtotime($row['registered_time']));
         echo "<td>" . $registeredTime . "</td>";
         // 更新日時を年月日の形式にフォーマットして表示
         $updatedTime = date('Y-m-d', strtotime($row['update_time']));
         echo "<td>" . $updatedTime . "</td>";
-        
-
 
         echo "</tr>";
       }

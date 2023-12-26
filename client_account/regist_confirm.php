@@ -64,7 +64,13 @@
   <div>
     <label class="box">性別</label>
     <label class="gender">
-      <?php echo $_POST['gender'] ?>
+    <?php
+    if ($_POST['gender'] == 0) {
+      echo '男';
+    } else {
+      echo '女';
+    }
+    ?>
     </label>
   </div>
 
@@ -99,7 +105,13 @@
   <div>
     <label class="box">アカウント権限</label>
     <label class="authority">
-      <?php echo $_POST['authority'] ?>
+    <?php
+    if ($_POST['authority'] == 0) {
+      echo '一般';
+    } else {
+      echo '管理者';
+    }
+    ?>
     </label>
   </div>
 
