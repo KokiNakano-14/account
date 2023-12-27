@@ -13,6 +13,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/list.css">
   <title>アカウント一覧</title>
 </head>
 <body>
@@ -77,6 +78,18 @@
         // 更新日時を年月日の形式にフォーマットして表示
         $updatedTime = date('Y-m-d', strtotime($row['update_time']));
         echo "<td>" . $updatedTime . "</td>";
+
+        echo "<td>"; // この行を追加
+        echo "<form action='list_update.php' method='post'>"; // 更新用のフォーム
+        echo "<input type='hidden' name='id' value='" . $row['id'] . "'>";
+        echo "<input type='submit' value='更新'>";
+        echo "</form>";
+
+        echo "<form action='list_delete.php' method='post'>"; // 削除用のフォーム
+        echo "<input type='hidden' name='id' value='" . $row['id'] . "'>";
+        echo "<input type='submit' value='削除'>";
+        echo "</form>";
+        echo "</td>"; // この行を追加
 
         echo "</tr>";
       }

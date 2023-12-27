@@ -1,0 +1,23 @@
+/* 全体の枠線 */
+body {
+  border: 2px black solid;
+  width: 60%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+
+/* ヘッダー */
+header {
+  text-align: center;
+  border-bottom: 2px black solid;
+}
+
+/* フッター */
+footer {
+  text-align: center;
+  border-top: 2px solid black;
+  margin-top: 30px;
+  padding-top: 10px;
+}
