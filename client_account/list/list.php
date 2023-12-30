@@ -13,8 +13,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/list.css">
   <title>アカウント一覧</title>
+  <link rel="stylesheet" type="text/css" href="list/list.css">
 </head>
 <body>
   
@@ -23,6 +23,7 @@
   </header>
 
   <main>
+
 
   <?php
 
@@ -79,7 +80,7 @@
         $updatedTime = date('Y-m-d', strtotime($row['update_time']));
         echo "<td>" . $updatedTime . "</td>";
 
-        echo "<td>"; // この行を追加
+        echo "<td>"; // 更新・削除ボタン
         echo "<form action='list_update.php' method='post'>"; // 更新用のフォーム
         echo "<input type='hidden' name='id' value='" . $row['id'] . "'>";
         echo "<input type='submit' value='更新'>";
@@ -89,7 +90,7 @@
         echo "<input type='hidden' name='id' value='" . $row['id'] . "'>";
         echo "<input type='submit' value='削除'>";
         echo "</form>";
-        echo "</td>"; // この行を追加
+        echo "</td>"; 
 
         echo "</tr>";
       }
