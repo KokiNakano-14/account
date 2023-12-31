@@ -22,6 +22,8 @@
     <div class="haeder">ヘッダー</div>
   </header>
 
+  <h1>アカウント一覧画面</h1>
+
   <main>
 
   <div id="user_list">
@@ -74,23 +76,27 @@
         }
         echo "</td>";
         // 登録日時を年月日の形式にフォーマットして表示
-        $registeredTime = date('Y-m-d', strtotime($row['registered_time']));
+        $registeredTime = date('Y/m/d', strtotime($row['registered_time']));
         echo "<td>" . $registeredTime . "</td>";
         // 更新日時を年月日の形式にフォーマットして表示
-        $updatedTime = date('Y-m-d', strtotime($row['update_time']));
+        $updatedTime = date('Y/m/d', strtotime($row['update_time']));
         echo "<td>" . $updatedTime . "</td>";
 
+        
         echo "<td>"; // 更新・削除ボタン
         echo "<form action='list_update.php' method='post'>"; // 更新用のフォーム
         echo "<input type='hidden' name='id' value='" . $row['id'] . "'>";
         echo "<input type='submit' value='更新'>";
         echo "</form>";
+        
 
+        
         echo "<form action='list_delete.php' method='post'>"; // 削除用のフォーム
         echo "<input type='hidden' name='id' value='" . $row['id'] . "'>";
         echo "<input type='submit' value='削除'>";
         echo "</form>";
         echo "</td>"; 
+        
 
         echo "</tr>";
       }

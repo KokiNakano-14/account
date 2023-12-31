@@ -3,6 +3,8 @@ body {
   border: 2px black solid;
   width: 80%;
   height: auto;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 40px;
 }
 
@@ -12,8 +14,29 @@ header {
   border-bottom: 2px black solid;
 }
 
-input {
-  float: left;
+h1 {
+  font-size: 15px;
+  margin-left: 20px;
+
+}
+
+/* アカウント一覧 */
+#user_list {
+  text-align: center;
+  width: 80%;
+  padding-top: 10px;
+  padding-left: 5%;
+  padding-right: 10%;
+  white-space: nowrap;
+}
+
+/* ボタンのデザイン */
+#user_list form {
+    display: inline-block;
+    border: 1px solid white;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: white;
 }
 
 /* フッター */
