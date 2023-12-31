@@ -14,7 +14,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>アカウント一覧</title>
-  <link rel="stylesheet" type="text/css" href="list/list.css">
+  <link rel="stylesheet" type="text/css" href="list.css">
 </head>
 <body>
   
@@ -24,7 +24,7 @@
 
   <main>
 
-
+  <div id="user_list">
   <?php
 
       echo "<table border='1' cellspacing='1'>";
@@ -98,7 +98,7 @@
 echo "</table>";
 
 ?>
-
+</div>
   
 
   </main>
