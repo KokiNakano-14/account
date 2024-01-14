@@ -82,6 +82,8 @@
         $updatedTime = date('Y/m/d', strtotime($row['update_time']));
         echo "<td>" . $updatedTime . "</td>";
 
+
+        // 遷移先のページ指定が上手くいっていない
         
         echo "<td>"; // 更新・削除ボタン
         echo "<form action='update.php' method='post'>"; // 更新用のフォーム
