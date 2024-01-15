@@ -19,8 +19,6 @@ if(isset($_POST['id'])) {
   session_start();
   $_SESSION['account_data'] = $row;
 
-  // 次の画面にリダイレクト
-  header('Location: delete_confirm.php');
 }
 // セッションからデータを取得
 $account_data = $_SESSION['account_data'];
@@ -39,16 +37,14 @@ if (!$account_data) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>アカウント削除画面</title>
+  <title>アカウント更新画面</title>
 </head>
-
 <body>
 
-  
 <header>ナビゲーションバー</header>
 
 <!-- アカウント情報 -->
-<h1>アカウント削除確認画面</h1>
+<h1>アカウント更新画面</h1>
 
 <div>
   <label class="box">名前（性）</label>

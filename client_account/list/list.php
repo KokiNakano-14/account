@@ -86,14 +86,13 @@
         // 遷移先のページ指定が上手くいっていない
         
         echo "<td>"; // 更新・削除ボタン
-        echo "<form action='update.php' method='post'>"; // 更新用のフォーム
+        echo "<form action='update/update.php' method='post'>"; // 更新用のフォーム
         echo "<input type='hidden' name='id' value='" . $row['id'] . "'>";
         echo "<input type='submit' value='更新'>";
         echo "</form>";
-        
 
-        
-        echo "<form action='delete.php' method='post'>"; // 削除用のフォーム
+
+        echo "<form action='delete/delete.php' method='post'>"; // 削除用のフォーム
         echo "<input type='hidden' name='id' value='" . $row['id'] . "'>";
         echo "<input type='submit' value='削除'>";
         echo "</form>";
