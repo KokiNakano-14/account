@@ -38,61 +38,65 @@ if (!$account_data) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>アカウント更新画面</title>
+  <link rel="stylesheet" type="text/css" href="update.css">
 </head>
 <body>
 
 <header>ナビゲーションバー</header>
 
 <!-- アカウント情報 -->
-<h1>アカウント更新画面</h1>
+<h2>アカウント更新画面</h2>
 
-<div>
+<div class="nyuuryoku">
   <label class="box">名前（性）</label>
   <label class="name1">
   <?php echo $account_data['family_name']; ?>
   </label>
 </div>
 
-<div>
+<div class="nyuuryoku">
   <label class="box">名前（名）</label>
   <label class="name2">
   <?php echo $account_data['last_name']; ?>
   </label>
 </div>
 
-<div>
+<div class="nyuuryoku">
   <label class="box">カナ（性）</label>
   <label class="name3">
   <?php echo $account_data['family_name_kana']; ?>
   </label>
 </div>
 
-<div>
+<div class="nyuuryoku">
   <label class="box">カナ（名）</label>
   <label class="name4">
   <?php echo $account_data['last_name_kana']; ?>
   </label>
 </div>
 
-<div>
+<div class="nyuuryoku">
   <label class="box">メールアドレス</label>
   <label class="mail">
   <?php echo $account_data['mail']; ?>
   </label>
 </div>
 
-<div>
+<div class="nyuuryoku">
   <label class="box">パスワード</label>
   <label class="password">
   <?php 
-    $password = $account_data['password'];
-    $hidden_password = str_repeat('●', strlen($password));
-    echo $hidden_password;
+    // $password = $account_data['password'];
+    // $hidden_password = str_repeat('●', strlen($password));
+    // echo $hidden_password;
+    echo $account_data['password'];
+    // ハッシュ化したパスワードを復元するのか
+    // データの保存方式自体変更するのか
     ?>
   </label>
 </div>
 
-<div>
+<div class="nyuuryoku">
   <label class="box">性別</label>
   <label class="gender">
   <?php
@@ -105,35 +109,35 @@ if (!$account_data) {
   </label>
 </div>
 
-<div>
+<div class="nyuuryoku">
   <label class="box">郵便番号</label>
   <label class="postal">
   <?php echo $account_data['postal_code']; ?>
   </label>
 </div>
 
-<div>
+<div class="nyuuryoku">
   <label class="box">都道府県（住所）</label>
   <label class="prefecture">
   <?php echo $account_data['prefecture']; ?>
   </label>
 </div>
 
-<div>
+<div class="nyuuryoku">
   <label class="box">住所（市区町村）</label>
   <label class="address1">
   <?php echo $account_data['address_1']; ?>
   </label>
 </div>
 
-<div>
+<div class="nyuuryoku">
   <label class="box">住所（番地）</label>
   <label class="address2">
   <?php echo $account_data['address_2']; ?>
   </label>
 </div>
 
-<div>
+<div class="nyuuryoku">
   <label class="box">アカウント権限</label>
   <label class="authority">
   <?php
@@ -146,6 +150,7 @@ if (!$account_data) {
   </label>
 </div>
 
+<footer>フッター</footer>
 
 </body>
 </html>
