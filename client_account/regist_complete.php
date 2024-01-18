@@ -6,11 +6,16 @@ $pdo = new PDO("mysql:dbname=client; host=localhost;", "root", "nako14");
 $stmt = $pdo->query("select * from user_info");
 
 // パスワードのハッシュ化
+// $user_password = $_POST['password'];
+// $hashed_password = password_hash($user_password, PASSWORD_DEFAULT);
+
+// パスワードの base64 エンコード
+// セキュリティ性の低い暗号化であるため注意
 $user_password = $_POST['password'];
-$hashed_password = password_hash($user_password, PASSWORD_DEFAULT);
+$encoded_password = base64_encode($user_password);
 
 // データベースへの挿入処理
-$insert_success = $pdo->exec("INSERT INTO user_info(family_name, last_name, family_name_kana, last_name_kana, mail, password, gender, postal_code, prefecture, address_1, address_2, authority) value ('" . $_POST['family_name'] . "','" . $_POST['last_name'] . "','" . $_POST['family_name_kana'] . "','" . $_POST['last_name_kana'] . "','" . $_POST['mail'] . "','" . $hashed_password . "','" . $_POST['gender'] . "','" . $_POST['postal_code'] . "','" . $_POST['prefecture'] . "','" . $_POST['address_1'] . "','" . $_POST['address_2'] . "','" . $_POST['authority'] . "');");
+$insert_success = $pdo->exec("INSERT INTO user_info(family_name, last_name, family_name_kana, last_name_kana, mail, password, gender, postal_code, prefecture, address_1, address_2, authority) value ('" . $_POST['family_name'] . "','" . $_POST['last_name'] . "','" . $_POST['family_name_kana'] . "','" . $_POST['last_name_kana'] . "','" . $_POST['mail'] . "','" . $encoded_password . "','" . $_POST['gender'] . "','" . $_POST['postal_code'] . "','" . $_POST['prefecture'] . "','" . $_POST['address_1'] . "','" . $_POST['address_2'] . "','" . $_POST['authority'] . "');");
 
 ?>
 
