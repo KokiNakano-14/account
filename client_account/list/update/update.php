@@ -52,35 +52,35 @@ $decoded_password = base64_decode($user_password);
   <!-- アカウント情報 -->
   <h2>アカウント更新画面</h2>
 
-  <form action="update_confirm.php" method="$_POST">
+  <form action="update_confirm.php" method="post">
   <div class="nyuuryoku">
     <label class="box">名前（性）</label>
-    <input type="text" class="name1" name="family_name" pattern="[ぁ-んァ-ン一-龯]+" value="<?php echo $account_data['family_name']; ?>">
+    <input type="text" maxlength="10" class="name1" name="family_name" pattern="[ぁ-んァ-ン一-龯]+" value="<?php echo $account_data['family_name']; ?>">
   </div>
 
   <div class="nyuuryoku">
     <label class="box">名前（名）</label>
-    <input type="text" class="name2" name="last_name" pattern="[ぁ-んァ-ン一-龯]+" value="<?php echo $account_data['last_name']; ?>">
+    <input type="text" maxlength="10" class="name2" name="last_name" pattern="[ぁ-んァ-ン一-龯]+" value="<?php echo $account_data['last_name']; ?>">
   </div>
 
   <div class="nyuuryoku">
   <label class="box">カナ（性）</label>
-    <input type="text" class="name3" name="family_name_kana" pattern="[ぁ-んァ-ン一-龯]+" value="<?php echo $account_data['family_name_kana']; ?>">
+    <input type="text" maxlength="10" class="name3" name="family_name_kana" pattern="[ぁ-んァ-ン一-龯]+" value="<?php echo $account_data['family_name_kana']; ?>">
   </div>
 
   <div class="nyuuryoku">
     <label class="box">カナ（名）</label>
-    <input type="text" class="name4" name="last_name_kana" pattern="[ぁ-んァ-ン一-龯]+" value="<?php echo $account_data['last_name_kana']; ?>">
+    <input type="text" maxlength="10" class="name4" name="last_name_kana" pattern="[ぁ-んァ-ン一-龯]+" value="<?php echo $account_data['last_name_kana']; ?>">
   </div>
 
   <div class="nyuuryoku">
     <label class="box">メールアドレス</label>
-    <input type="email" class="mail" name="mail" pattern="[ぁ-んァ-ン一-龯]+" value="<?php echo $account_data['mail']; ?>">
+    <input type="email" maxlength="100" class="mail" name="mail" pattern="[a-zA-Z0-9@-]+" value="<?php echo $account_data['mail']; ?>">
   </div>
 
   <div class="nyuuryoku">
     <label class="box">パスワード</label>
-    <input type="text" class="password" name="password" pattern="[ぁ-んァ-ン一-龯]+" 
+    <input type="text" maxlength="10" class="password" name="password" 
     value="<?php 
       $hidden_password = str_repeat('●', strlen($decoded_password));
       echo $hidden_password;
@@ -98,7 +98,7 @@ $decoded_password = base64_decode($user_password);
 
   <div class="nyuuryoku">
     <label class="box">郵便番号</label>
-    <input type="text" class="postal" name="postal_code" pattern="\d{7}" value="<?php echo $account_data['postal_code']; ?>">
+    <input type="text" maxlength="7" class="postal" name="postal_code" value="<?php echo $account_data['postal_code']; ?>">
   </div>
 
   <div class="nyuuryoku">
@@ -131,13 +131,13 @@ $decoded_password = base64_decode($user_password);
 
   <div class="nyuuryoku">
     <label class="box">住所（市区町村）</label>
-    <input type="text" class="address1" name="address_1" pattern="[ぁ-んァ-ヶー一-龠0-9\s\-]+" value="<?php echo $account_data['address_1']; ?>">
+    <input type="text" maxlength="10" class="address1" name="address_1" pattern="[ぁ-んァ-ヶー一-龠0-9\s\-]+" value="<?php echo $account_data['address_1']; ?>">
   </div>
 
 
   <div class="nyuuryoku">
     <label class="box">住所（番地）</label>
-    <input type="text" class="address2" name="address_2" pattern="[ぁ-んァ-ヶー一-龠0-9\s\-]+" value="<?php echo $account_data['address_2']; ?>">
+    <input type="text" maxlength="100" class="address2" name="address_2" pattern="[ぁ-んァ-ヶー一-龠0-9\s\-]+" value="<?php echo $account_data['address_2']; ?>">
   </div>
 
   <div class="nyuuryoku">
@@ -146,9 +146,12 @@ $decoded_password = base64_decode($user_password);
     <option value="0" <?php echo ($account_data['authority'] == 0) ? 'selected' : ''; ?>>一般</option>
     <option value="1" <?php echo ($account_data['authority'] == 1) ? 'selected' : ''; ?>>管理者</option>
   </select>
-</div>
+  </div>
 
-<!-- 更新ボタン作成予定 -->
+<!-- ページ移行更新ボタン -->
+  <div>
+    <input type="submit" class="update_btn" value="確認する">
+  </div>
 
   </form>
 
