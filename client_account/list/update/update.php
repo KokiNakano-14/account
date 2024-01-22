@@ -3,35 +3,43 @@
 mb_internal_encoding("utf8");
 // DBに接続する
 $pdo = new PDO("mysql:dbname=client;host=localhost;", "root", "nako14");
+
+
+// update.phpで実装すべき内容
+// 選択されたidを元にデータを取得
+
+
 // IDが渡されているか確認
-if (isset($_POST['id'])) {
+// if (isset($_POST['id'])) {
   // IDを取得
-  $id = $_POST['id'];
+  // $id = $_POST['id'];
 
   // SQL文を準備
-  $stmt = $pdo->prepare("SELECT * FROM user_info WHERE id = ?");
-  $stmt->execute([$id]);
+  // $stmt = $pdo->prepare("SELECT * FROM user_info WHERE id = ?");
+  // $stmt->execute([$id]);
 
   // 結果を取得
-  $row = $stmt->fetch(PDO::FETCH_ASSOC);
+  // $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
   // 取得したデータを次の画面に渡すためにセッションに保存
-  session_start();
-  $_SESSION['account_data'] = $row;
-}
+  // session_start();
+  // $_SESSION['account_data'] = $row;
+// }
 // セッションからデータを取得
-$account_data = $_SESSION['account_data'];
+// $account_data = $_SESSION['account_data'];
 
 // セッション内のデータが存在するか確認
-if (!$account_data) {
+// if (!$account_data) {
   // データがない場合の処理
-  echo "データベースに接続できませんでした。";
-  exit;
-}
+  // echo "データベースに接続できませんでした。";
+  // exit;
+// }
 
 // エンコードしたパスワードをデコード
-$user_password = $account_data['password'];
-$decoded_password = base64_decode($user_password);
+// $user_password = $account_data['password'];
+// $decoded_password = base64_decode($user_password);
+
+
 
 ?>
 
@@ -80,7 +88,7 @@ $decoded_password = base64_decode($user_password);
 
   <div class="nyuuryoku">
     <label class="box">パスワード</label>
-    <input type="text" maxlength="10" class="password" name="password" 
+    <input type="password" maxlength="10" class="password" name="password" 
     value="<?php 
       $hidden_password = str_repeat('●', strlen($decoded_password));
       echo $hidden_password;
