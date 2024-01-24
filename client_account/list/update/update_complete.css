@@ -1,0 +1,45 @@
+/* 全体の枠線 */
+body {
+  border: 2px solid black;
+  height: 600px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+/* ヘッダー */
+header {
+  text-align: center;
+  border-bottom: 2px black solid;
+}
+
+h2 {
+  font-size: 15px;
+  padding-left: 40px;
+}
+
+main {
+  text-align: center;
+  margin-top: 200px;
+  font-size: 20px;
+}
+
+/* 送信ボタン */
+.button {
+  margin-left: 330px;
+  margin-top: 200px;
+  margin-bottom: 20px;
+}
+
+/* フッター */
+footer {
+  text-align: center;
+  border-top: 2px solid black;
+  margin-top: auto;
+  padding-top: 10px;
+}
+
+/* エラーメッセージ */
+.error-message {
+  color: red;
+}
