@@ -53,6 +53,7 @@
   <div>
     <label class="box">パスワード</label>
     <label class="password">
+      <!-- POST送信されたパスワードを暗号化 -->
     <?php 
       $password = $_POST['password'];
       $hidden_password = str_repeat('●', strlen($password));
